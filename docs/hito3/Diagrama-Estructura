@@ -1,0 +1,123 @@
+<mxfile>
+  <diagram name="MedReserve Completo">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Nodo principal -->
+        <mxCell id="2" value="MedReserve" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="500" y="20" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Nivel 1 -->
+        <mxCell id="3" value="Gestión de Usuarios" vertex="1" parent="1">
+          <mxGeometry x="100" y="120" width="180" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="4" value="Gestión de Citas" vertex="1" parent="1">
+          <mxGeometry x="350" y="120" width="180" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="5" value="Pagos" vertex="1" parent="1">
+          <mxGeometry x="600" y="120" width="180" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="6" value="Notificaciones" vertex="1" parent="1">
+          <mxGeometry x="850" y="120" width="180" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Subniveles Usuarios -->
+        <mxCell id="7" value="Registro" vertex="1" parent="1">
+          <mxGeometry x="80" y="220" width="140" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="8" value="Login" vertex="1" parent="1">
+          <mxGeometry x="80" y="270" width="140" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="9" value="Perfil" vertex="1" parent="1">
+          <mxGeometry x="80" y="320" width="140" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="10" value="Historial Médico" vertex="1" parent="1">
+          <mxGeometry x="80" y="370" width="140" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Subniveles Citas -->
+        <mxCell id="11" value="Crear cita" vertex="1" parent="1">
+          <mxGeometry x="330" y="220" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="12" value="Reprogramar" vertex="1" parent="1">
+          <mxGeometry x="330" y="270" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="13" value="Cancelar" vertex="1" parent="1">
+          <mxGeometry x="330" y="320" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="14" value="Consultar" vertex="1" parent="1">
+          <mxGeometry x="330" y="370" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="15" value="Calendario" vertex="1" parent="1">
+          <mxGeometry x="330" y="420" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Subniveles Pagos -->
+        <mxCell id="16" value="Procesar pago" vertex="1" parent="1">
+          <mxGeometry x="600" y="220" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="17" value="Métodos de pago" vertex="1" parent="1">
+          <mxGeometry x="600" y="270" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="18" value="Historial" vertex="1" parent="1">
+          <mxGeometry x="600" y="320" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Subniveles Notificaciones -->
+        <mxCell id="19" value="Recordatorios" vertex="1" parent="1">
+          <mxGeometry x="850" y="220" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="20" value="Confirmaciones" vertex="1" parent="1">
+          <mxGeometry x="850" y="270" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="21" value="Cancelaciones" vertex="1" parent="1">
+          <mxGeometry x="850" y="320" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Conexiones principales -->
+        <mxCell id="30" edge="1" parent="1" source="2" target="3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="31" edge="1" parent="1" source="2" target="4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="32" edge="1" parent="1" source="2" target="5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="33" edge="1" parent="1" source="2" target="6"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- Conexiones subniveles -->
+        <mxCell id="40" edge="1" parent="1" source="3" target="7"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="41" edge="1" parent="1" source="3" target="8"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="42" edge="1" parent="1" source="3" target="9"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="43" edge="1" parent="1" source="3" target="10"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="44" edge="1" parent="1" source="4" target="11"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="45" edge="1" parent="1" source="4" target="12"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="46" edge="1" parent="1" source="4" target="13"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="47" edge="1" parent="1" source="4" target="14"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="48" edge="1" parent="1" source="4" target="15"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="49" edge="1" parent="1" source="5" target="16"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="50" edge="1" parent="1" source="5" target="17"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="51" edge="1" parent="1" source="5" target="18"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="52" edge="1" parent="1" source="6" target="19"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="53" edge="1" parent="1" source="6" target="20"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="54" edge="1" parent="1" source="6" target="21"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
