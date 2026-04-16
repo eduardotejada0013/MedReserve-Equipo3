@@ -15,7 +15,7 @@ MedReserve es una plataforma integral de gestión de clínica médica que digita
 ## Estructura del Repositorio
 
 ```text
-MedReserve-EquipoX/
+MedReserve-Equipo3/
 ├── docs/
 │   ├── hito1/           ← Visión del proyecto, stakeholders, requerimientos
 │   ├── hito2/           ← Diagramas UML, MER, diccionario de datos, informe de avance
