@@ -1,0 +1,194 @@
+UC01: Registro de Paciente (Proceso Completo)
+<mxfile host="app.diagrams.net">
+  <diagram name="UC01-Registro">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="p1" value="Paciente" style="shape=umlActor;html=1;" vertex="1" parent="1"><mxGeometry x="20" y="200" width="30" height="60" as="geometry" /></mxCell>
+        <mxCell id="n1" value="Ingresar Datos y Cédula" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="120" y="195" width="140" height="70" as="geometry" /></mxCell>
+        <mxCell id="d1" value="¿Cédula Válida?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="320" y="190" width="100" height="80" as="geometry" /></mxCell>
+        <mxCell id="n2" value="Notificar Error de Registro" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;" vertex="1" parent="1"><mxGeometry x="310" y="320" width="120" height="60" as="geometry" /></mxCell>
+        <mxCell id="n3" value="Almacenar en DB PostgreSQL" style="shape=cylinder3;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="500" y="190" width="90" height="80" as="geometry" /></mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="p1" target="n1"/><mxCell id="e2" edge="1" parent="1" source="n1" target="d1"/>
+        <mxCell id="e3" value="No" edge="1" parent="1" source="d1" target="n2"/><mxCell id="e4" value="Si" edge="1" parent="1" source="d1" target="n3"/>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+
+UC02: Autenticación con Token JWT
+<mxfile host="app.diagrams.net">
+  <diagram name="UC02-Login">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="a1" value="Usuario" style="shape=umlActor;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="180" width="30" height="60" as="geometry" /></mxCell>
+        <mxCell id="n1" value="Ingresar Credenciales" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="140" y="175" width="140" height="70" as="geometry" /></mxCell>
+        <mxCell id="d1" value="¿Match Password?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="340" y="170" width="100" height="80" as="geometry" /></mxCell>
+        <mxCell id="n2" value="Generar Token de Sesión" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="520" y="175" width="130" height="70" as="geometry" /></mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="a1" target="n1"/><mxCell id="e2" edge="1" parent="1" source="n1" target="d1"/>
+        <mxCell id="e3" value="Si" edge="1" parent="1" source="d1" target="n2"/>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+
+UC03: Agendar Cita
+<mxfile host="app.diagrams.net">
+  <diagram name="UC03-Agendar">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="p" value="Paciente" style="shape=umlActor;html=1;" vertex="1" parent="1"><mxGeometry x="30" y="200" width="30" height="60" as="geometry" /></mxCell>
+        <mxCell id="n1" value="Consultar Disponibilidad" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="130" y="195" width="140" height="70" as="geometry" /></mxCell>
+        <mxCell id="d1" value="¿Slot Libre?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="330" y="190" width="100" height="80" as="geometry" /></mxCell>
+        <mxCell id="n2" value="Confirmar y Bloquear Horario" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="490" y="195" width="150" height="70" as="geometry" /></mxCell>
+        <mxCell id="n3" value="Enviar Email Confirmación" style="ellipse;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1"><mxGeometry x="710" y="195" width="140" height="70" as="geometry" /></mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="p" target="n1"/><mxCell id="e2" edge="1" parent="1" source="n1" target="d1"/>
+        <mxCell id="e3" value="Si" edge="1" parent="1" source="d1" target="n2"/><mxCell id="e4" edge="1" parent="1" source="n2" target="n3"/>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+
+UC04: Cancelación de Cita
+<mxfile host="app.diagrams.net">
+  <diagram name="UC04-Cancelar">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="p" value="Paciente" style="shape=umlActor;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="200" width="30" height="60" as="geometry" /></mxCell>
+        <mxCell id="n1" value="Solicitar Cancelación" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="140" y="195" width="140" height="70" as="geometry" /></mxCell>
+        <mxCell id="n2" value="Liberar Horario en DB" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="350" y="195" width="140" height="70" as="geometry" /></mxCell>
+        <mxCell id="n3" value="Actualizar Log Auditoría" style="shape=note;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="375" y="320" width="90" height="100" as="geometry" /></mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="p" target="n1"/><mxCell id="e2" edge="1" parent="1" source="n1" target="n2"/><mxCell id="e3" edge="1" parent="1" source="n2" target="n3" style="dashed=1;"/>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+
+UC05: Reprogramar Cita
+<mxfile host="app.diagrams.net">
+  <diagram name="UC05">
+    <mxGraphModel dx="500" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="a1" value="Paciente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="50" y="100" width="30" height="60" as="geometry" /></mxCell>
+        <mxCell id="u1" value="Cambiar Fecha/Hora" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="160" y="95" width="140" height="70" as="geometry" /></mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="a1" target="u1"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+
+UC06: Consultar Historial (Paciente)
+<mxfile host="app.diagrams.net">
+  <diagram name="UC06">
+    <mxGraphModel dx="500" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="a1" value="Paciente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="50" y="100" width="30" height="60" as="geometry" /></mxCell>
+        <mxCell id="u1" value="Ver Mis Diagnósticos" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="160" y="95" width="140" height="70" as="geometry" /></mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="a1" target="u1"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+
+UC07: Visualizar Agenda Médica
+<mxfile host="app.diagrams.net">
+  <diagram name="UC07">
+    <mxGraphModel dx="500" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="a2" value="Médico" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="50" y="100" width="30" height="60" as="geometry" /></mxCell>
+        <mxCell id="u2" value="Consultar Agenda Diaria" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="160" y="95" width="150" height="70" as="geometry" /></mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="a2" target="u2"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+
+UC08: Registro de Diagnóstico
+<mxfile host="app.diagrams.net">
+  <diagram name="UC08-Diagnostico">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="m" value="Médico" style="shape=umlActor;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="200" width="30" height="60" as="geometry" /></mxCell>
+        <mxCell id="n1" value="Abrir Expediente Paciente" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="140" y="195" width="150" height="70" as="geometry" /></mxCell>
+        <mxCell id="n2" value="Ingresar Diagnóstico CIE-10" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="360" y="195" width="160" height="70" as="geometry" /></mxCell>
+        <mxCell id="n3" value="Generar Receta PDF" style="ellipse;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1"><mxGeometry x="590" y="195" width="130" height="70" as="geometry" /></mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="m" target="n1"/><mxCell id="e2" edge="1" parent="1" source="n1" target="n2"/><mxCell id="e3" edge="1" parent="1" source="n2" target="n3"/>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+
+UC09: Consultar Historial (Médico)
+<mxfile host="app.diagrams.net">
+  <diagram name="UC09">
+    <mxGraphModel dx="500" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="a2" value="Médico" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="50" y="100" width="30" height="60" as="geometry" /></mxCell>
+        <mxCell id="u2" value="Buscar Historial de Paciente" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="160" y="95" width="160" height="70" as="geometry" /></mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="a2" target="u2"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+UC10: Gestionar Usuarios (CRUD)
+<mxfile host="app.diagrams.net">
+  <diagram name="UC10">
+    <mxGraphModel dx="500" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="a3" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="50" y="100" width="30" height="60" as="geometry" /></mxCell>
+        <mxCell id="u3" value="Administrar Cuentas" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="160" y="95" width="150" height="70" as="geometry" /></mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="a3" target="u3"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+
+UC11: Generación de Reportes Administrativos
+<mxfile host="app.diagrams.net">
+  <diagram name="UC11-Reportes">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="a" value="Admin" style="shape=umlActor;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="200" width="30" height="60" as="geometry" /></mxCell>
+        <mxCell id="n1" value="Filtrar Parámetros (Fechas)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="140" y="195" width="150" height="70" as="geometry" /></mxCell>
+        <mxCell id="n2" value="Ejecutar Consulta BI" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="360" y="195" width="140" height="70" as="geometry" /></mxCell>
+        <mxCell id="n3" value="Exportar Excel/PDF" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="570" y="195" width="130" height="70" as="geometry" /></mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="a" target="n1"/><mxCell id="e2" edge="1" parent="1" source="n1" target="n2"/><mxCell id="e3" edge="1" parent="1" source="n2" target="n3"/>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+
+UC12: Gestión de Facturación
+<mxfile host="app.diagrams.net">
+  <diagram name="UC12">
+    <mxGraphModel dx="500" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="a3" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1"><mxGeometry x="50" y="100" width="30" height="60" as="geometry" /></mxCell>
+        <mxCell id="u3" value="Generar Comprobante" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="160" y="95" width="150" height="70" as="geometry" /></mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="a3" target="u3"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
