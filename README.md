@@ -1,4 +1,4 @@
-MediConnect — Sistema de Gestión de Clínica Médica
+MedReserve — Sistema de Gestión de citas Medicas
 Proyecto académico | Análisis y Diseño de Sistemas
 Universidad Abierta Para Adultos — Escuela de Ingeniería y Tecnología
 Autores: 
@@ -32,5 +32,5 @@ MediConnect-EquipoX/
 │   ├── figma-enlace.txt
 │   └── capturas/
 │
-├── README.md
+├── README.md 
 └── .gitignore
